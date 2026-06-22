@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item *)",
+      "PowerShell(Stop-Job *)",
+      "PowerShell(Rename-Item *)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(Move-Item *)",
+      "Bash(tasklist)",
+      "Bash(netstat -ano)",
+      "PowerShell(Get-Job *)",
+      "PowerShell(cmd /c \"rename C:\\\\my_ai_web\\\\lecture1\\\\my-react-app _template_settings\" 2>&1; Get-ChildItem \"C:\\\\my_ai_web\\\\lecture1\" | Select-Object Name)",
+      "PowerShell(robocopy \"C:\\\\my_ai_web\\\\lecture1\\\\my-react-app\" \"C:\\\\my_ai_web\\\\lecture1\\\\_template_settings\" /E /MOVE /NFL /NDL /NJH /NJS /NC /NS 2>&1 | Select-Object -Last 5; Get-ChildItem \"C:\\\\my_ai_web\\\\lecture1\" | Select-Object Name)",
+      "PowerShell(Write-Output \"=== package.json 패키지 확인 ===\"; $pkg = Get-Content \"C:\\\\my_ai_web\\\\lecture1\\\\_template_settings\\\\package.json\" | ConvertFrom-Json; $pkg.dependencies.PSObject.Properties | Select-Object Name, Value; Write-Output \"---devDependencies---\"; $pkg.devDependencies.PSObject.Properties | Select-Object Name, Value)",
+      "PowerShell(gh *)"
+    ],
+    "deny": []
+  },
+  "BASH_DEFAULT_TIMEOUT_MS": "600000",
+  "BASH_MAX_TIMEOUT_MS": "600000"
+}
